@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <!-- Hat / Headwear Overlay Alpha Layer -->
+  <g id="hat_overlay">
+    <!-- Cap Crown Base -->
+    <path d="M190 145 C190 110, 310 110, 310 145 C310 160, 190 160, 190 145 Z" fill="#1E293B" stroke="#F59E0B" stroke-width="4"/>
+    <!-- Visor Brim -->
+    <path d="M170 155 Q250 175 330 155 Q250 162 170 155 Z" fill="#0F172A" stroke="#F59E0B" stroke-width="3"/>
+    <!-- Crown Emblem -->
+    <path d="M235 125 L242 135 L250 120 L258 135 L265 125 L262 142 L238 142 Z" fill="#FBBF24"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="top_overlay_b">
+    <path d="M170 215 L330 215 L340 345 L160 345 Z" fill="#020617" stroke="#06B6D4" stroke-width="3"/>
+    <path d="M210 240 L290 240 L280 290 L220 290 Z" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="250" cy="265" r="14" fill="#06B6D4" opacity="0.9"/>
+  </g>
+</svg>

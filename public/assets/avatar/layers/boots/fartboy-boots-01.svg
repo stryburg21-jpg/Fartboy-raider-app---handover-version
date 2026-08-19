@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="100%" height="100%">
+  <defs>
+    <!-- 3D HIGH-TOP LEATHER BOOT GRADIENT -->
+    <radialGradient id="bootLeather3D" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="45%" stop-color="#ea580c"/>
+      <stop offset="85%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </radialGradient>
+
+    <linearGradient id="soleRubber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <filter id="bootShadow3D" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4.5" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- BOOTS LAYER (FITS LOWER LEGS AND FEET Y=378..462, X=132..268) -->
+  <g id="boots-3d-layer" filter="url(#bootShadow3D)">
+    <!-- High-Grip Tactical Socks -->
+    <rect x="150" y="378" width="32" height="26" rx="5" fill="#facc15" stroke="#854d0e" stroke-width="2"/>
+    <path d="M 150 384 L 182 384 M 150 390 L 182 390" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <rect x="218" y="378" width="32" height="26" rx="5" fill="#facc15" stroke="#854d0e" stroke-width="2"/>
+    <path d="M 218 384 L 250 384 M 218 390 L 250 390" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Left High-Top Tactical Boot -->
+    <path d="M 146 398 L 186 398 L 190 450 C 190 458, 180 460, 138 458 C 130 458, 130 445, 140 435 L 146 398 Z" fill="url(#bootLeather3D)" stroke="#7c2d12" stroke-width="2.5"/>
+    <!-- Left Boot Toe Cap Highlight -->
+    <path d="M 134 445 Q 148 435 170 442 Q 170 455 138 456 Z" fill="#ffedd5" opacity="0.3"/>
+
+    <!-- Right High-Top Tactical Boot -->
+    <path d="M 214 398 L 254 398 L 260 435 C 270 445, 270 458, 262 458 C 220 460, 210 458, 210 450 L 214 398 Z" fill="url(#bootLeather3D)" stroke="#7c2d12" stroke-width="2.5"/>
+    <!-- Right Boot Toe Cap Highlight -->
+    <path d="M 266 445 Q 252 435 230 442 Q 230 455 262 456 Z" fill="#ffedd5" opacity="0.3"/>
+
+    <!-- Metallic Eyelets & Laces -->
+    <path d="M 148 408 L 178 408 M 146 418 L 178 418 M 144 428 L 178 428" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 222 408 L 252 408 M 222 418 L 254 418 M 222 428 L 256 428" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Heavy-Duty Treaded Rubber Soles -->
+    <path d="M 132 454 Q 164 458 192 454 L 192 463 Q 164 466 132 463 Z" fill="url(#soleRubber)" stroke="#090d16" stroke-width="2"/>
+    <path d="M 208 454 Q 236 458 268 454 L 268 463 Q 236 466 208 463 Z" fill="url(#soleRubber)" stroke="#090d16" stroke-width="2"/>
+
+    <!-- Sole Tread Lines -->
+    <path d="M 142 457 L 142 462 M 156 458 L 156 463 M 170 458 L 170 463 M 184 457 L 184 462" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 216 457 L 216 462 M 230 458 L 230 463 M 244 458 L 244 463 M 258 457 L 258 462" stroke="#64748b" stroke-width="1.5"/>
+  </g>
+</svg>

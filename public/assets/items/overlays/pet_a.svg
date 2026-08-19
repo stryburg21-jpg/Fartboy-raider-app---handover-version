@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="pet_overlay_a">
+    <!-- Floating Cyber Dragon Pet (Positioned to the side of character zIndex 30) -->
+    <g transform="translate(350, 360)">
+      <circle cx="0" cy="0" r="30" fill="#10B981" opacity="0.8"/>
+      <polygon points="0,-25 15,10 -15,10" fill="#34D399"/>
+      <circle cx="-8" cy="-5" r="4" fill="#022C22"/>
+      <circle cx="8" cy="-5" r="4" fill="#022C22"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,231 @@
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+body {
+  overscroll-behavior-y: contain;
+}
+
+@keyframes periodic-shake {
+  0%,
+  82%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+  84% {
+    transform: translateX(-4px) rotate(-0.6deg) scale(1.01);
+  }
+  86% {
+    transform: translateX(4px) rotate(0.6deg) scale(1.01);
+  }
+  88% {
+    transform: translateX(-3px) rotate(-0.4deg);
+  }
+  90% {
+    transform: translateX(3px) rotate(0.4deg);
+  }
+  92% {
+    transform: translateX(-1px);
+  }
+  94% {
+    transform: translateX(0);
+  }
+}
+
+.animate-periodic-shake {
+  animation: periodic-shake 5s ease-in-out infinite;
+}
+
+@keyframes stamp-impact {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(-25deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.92) rotate(-11deg);
+  }
+  75% {
+    transform: scale(1.06) rotate(-13deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+  }
+}
+
+.animate-stamp-impact {
+  animation: stamp-impact 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes tactical-screen-shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-3px, 2px) rotate(-0.5deg);
+  }
+  40% {
+    transform: translate(3px, -2px) rotate(0.5deg);
+  }
+  60% {
+    transform: translate(-2px, -1px) rotate(-0.3deg);
+  }
+  80% {
+    transform: translate(2px, 1px) rotate(0.3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.animate-tactical-shake {
+  animation: tactical-screen-shake 0.35s ease-out;
+}
+
+@keyframes fire-aura {
+  0%,
+  100% {
+    box-shadow:
+      0 0 15px rgba(245, 158, 11, 0.4),
+      0 0 30px rgba(239, 68, 68, 0.3),
+      inset 0 0 15px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 25px rgba(245, 158, 11, 0.7),
+      0 0 45px rgba(239, 68, 68, 0.5),
+      inset 0 0 25px rgba(245, 158, 11, 0.4);
+    border-color: rgba(239, 68, 68, 0.9);
+  }
+}
+
+.animate-fire-aura {
+  animation: fire-aura 2s ease-in-out infinite;
+}
+
+@keyframes hologram-scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-hologram-scan {
+  animation: hologram-scan 2.5s linear infinite;
+}
+
+@keyframes radar-ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping {
+  animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes foil-sweep {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+}
+
+@keyframes foil-sweep-reverse {
+  0% {
+    transform: translate(50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+}
+
+@keyframes holographic-glitter {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-foil-sweep {
+  animation: foil-sweep 4s ease-in-out infinite;
+}
+
+.animate-foil-sweep-reverse {
+  animation: foil-sweep-reverse 4.5s ease-in-out infinite;
+}
+
+.animate-holographic-glitter {
+  animation: holographic-glitter 6s ease-in-out infinite alternate;
+}
+
+@keyframes pack-shake {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(-2.5deg) scale(1.02);
+  }
+  40% {
+    transform: rotate(2.5deg) scale(1.02);
+  }
+  60% {
+    transform: rotate(-1.5deg) scale(1.01);
+  }
+  80% {
+    transform: rotate(1.5deg) scale(1.01);
+  }
+}
+
+.animate-pack-shake {
+  animation: pack-shake 2.5s infinite ease-in-out;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.animate-pack-shake:hover,
+.animate-pack-shake:active,
+.group:hover .animate-pack-shake,
+.group:active .animate-pack-shake {
+  animation: pack-shake 0.6s infinite ease-in-out;
+  box-shadow: 0 0 18px rgba(234, 179, 8, 0.6);
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%,
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmer-sweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,135 @@
+{
+  "status": "success",
+  "version": "3.1.0",
+  "economySpec": "Economy Design Bible v3.1",
+  "player": {
+    "id": "raider_007",
+    "username": "FartboyMaster",
+    "level": 27,
+    "currentXP": 6430,
+    "xpToNextLevel": 8500,
+    "title": "BUBBLE BLASTER",
+    "reputationScore": 850,
+    "reputationTier": "Trusted Raider",
+    "equipped": {
+      "head": "item_hat_rare_01",
+      "body": "item_top_epic_01",
+      "shorts": "item_shorts_uncommon_01",
+      "feet": "item_boots_rare_01",
+      "back": "item_cape_legendary_01",
+      "pet": "item_pet_epic_01",
+      "powerItem": "item_power_mythic_01"
+    },
+    "equippedItemsDetails": [
+      {
+        "slot": "head",
+        "label": "HAT",
+        "id": "item_hat_rare_01",
+        "name": "Crown of Farts",
+        "rarity": "rare",
+        "set": "Raid Specialist Set",
+        "bonusXP": 2.0,
+        "packLuck": 3.5,
+        "level": 3
+      },
+      {
+        "slot": "body",
+        "label": "TOP",
+        "id": "item_top_epic_01",
+        "name": "Toxic Hazard Vest",
+        "rarity": "epic",
+        "set": "Raid Specialist Set",
+        "bonusXP": 3.0,
+        "packLuck": 4.5,
+        "level": 4
+      },
+      {
+        "slot": "shorts",
+        "label": "SHORTS",
+        "id": "item_shorts_uncommon_01",
+        "name": "Tainted Cargo Shorts",
+        "rarity": "uncommon",
+        "set": "Raid Specialist Set",
+        "bonusXP": 1.5,
+        "packLuck": 2.0,
+        "level": 2
+      },
+      {
+        "slot": "feet",
+        "label": "BOOTS",
+        "id": "item_boots_rare_01",
+        "name": "Methane Stompers",
+        "rarity": "rare",
+        "set": "Raid Specialist Set",
+        "bonusXP": 2.0,
+        "packLuck": 3.0,
+        "level": 3
+      },
+      {
+        "slot": "back",
+        "label": "CAPE",
+        "id": "item_cape_legendary_01",
+        "name": "Cape of the Flatulent Sun",
+        "rarity": "legendary",
+        "set": "Raid Specialist Set",
+        "bonusXP": 3.5,
+        "packLuck": 5.0,
+        "level": 5
+      },
+      {
+        "slot": "pet",
+        "label": "PET",
+        "id": "item_pet_epic_01",
+        "name": "Stinky the Fart Sprite",
+        "rarity": "epic",
+        "set": "Raid Specialist Set",
+        "bonusXP": 2.5,
+        "packLuck": 3.5,
+        "level": 4
+      },
+      {
+        "slot": "powerItem",
+        "label": "POWER ITEM",
+        "id": "item_power_mythic_01",
+        "name": "Aura of Methane Annihilation",
+        "rarity": "mythic",
+        "set": "Raid Specialist Set",
+        "bonusXP": 4.0,
+        "packLuck": 6.0,
+        "level": 5
+      }
+    ],
+    "activeBoostsAndPerks": {
+      "equipmentXpBoost": "+8.0% / +10.0% MAX",
+      "activeSetXpBoost": "+15.0%",
+      "seasonalTitleXpBoost": "+3.0%",
+      "reputationMultiplier": "1.25x",
+      "categoryXpPerks": {
+        "memeXpBoost": "+0%",
+        "ctoXpBoost": "+0%",
+        "videoXpBoost": "+0%"
+      },
+      "luckAndEconomyPerks": {
+        "packLuck": "+24.5%",
+        "collectionLuck": "+12.0%",
+        "forgeDiscount": "-15%"
+      }
+    },
+    "activeSetInfo": {
+      "setName": "RAID SPECIALIST SET",
+      "piecesEquipped": 7,
+      "piecesRequired": 7,
+      "is7of7Complete": true,
+      "setBonusEffect": "+15.0% Raid XP",
+      "note": "Incomplete sets (<7/7) grant 0% bonus"
+    },
+    "lifetimeCareerStats": {
+      "verifiedRaids": 1420,
+      "approvedMemes": 88,
+      "approvedVideos": 14,
+      "completedMissions": 312,
+      "lifetimeXpEarned": 1850000,
+      "vaultPacksOpened": 74
+    }
+  }
+}

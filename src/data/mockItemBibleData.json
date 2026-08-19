@@ -1,0 +1,211 @@
+{
+  "version": "3.1",
+  "season": 1,
+  "economy_rules": {
+    "equipment_cap_pct": 10.0,
+    "set_bonus_specialist_pct": 15.0,
+    "set_bonus_season_pct": 10.0,
+    "reroll_cost_sp_xp": 5000,
+    "reroll_range_min_pct": 0.8,
+    "reroll_range_max_pct": 1.0
+  },
+  "stat_matrix_by_rarity": {
+    "Common": {
+      "lvl1": 0.05,
+      "lvl3": 0.1,
+      "lvl5": 0.15,
+      "lvl8": 0.22,
+      "lvl10": 0.3,
+      "secondary_slots": 0
+    },
+    "Uncommon": {
+      "lvl1": 0.1,
+      "lvl3": 0.2,
+      "lvl5": 0.3,
+      "lvl8": 0.42,
+      "lvl10": 0.5,
+      "secondary_slots": 1
+    },
+    "Rare": {
+      "lvl1": 0.2,
+      "lvl3": 0.35,
+      "lvl5": 0.5,
+      "lvl8": 0.68,
+      "lvl10": 0.8,
+      "secondary_slots": 1
+    },
+    "Epic": {
+      "lvl1": 0.35,
+      "lvl3": 0.55,
+      "lvl5": 0.75,
+      "lvl8": 0.95,
+      "lvl10": 1.1,
+      "secondary_slots": 2
+    },
+    "Legendary": {
+      "lvl1": 0.5,
+      "lvl3": 0.75,
+      "lvl5": 1.0,
+      "lvl8": 1.25,
+      "lvl10": 1.4,
+      "secondary_slots": 2
+    },
+    "Mythic": {
+      "lvl1": 0.7,
+      "lvl3": 1.0,
+      "lvl5": 1.3,
+      "lvl8": 1.6,
+      "lvl10": 1.8,
+      "secondary_slots": 3
+    }
+  },
+  "total_base_items": 84,
+  "sets": [
+    {
+      "set_id": "set_raid",
+      "name": "Raid Specialist",
+      "bonus": "+15% Raid XP Bonus",
+      "items": [
+        { "item_id": "raid_hat_01", "base_name": "Raid Helmet of the Frontline", "slot": "HAT" },
+        { "item_id": "raid_hat_02", "base_name": "Tactical Raid Visor", "slot": "HAT" },
+        { "item_id": "raid_top_01", "base_name": "Armored Raid Vest", "slot": "TOP" },
+        { "item_id": "raid_top_02", "base_name": "Commando Tactical Hoodie", "slot": "TOP" },
+        { "item_id": "raid_shorts_01", "base_name": "Combat Raid Cargo Shorts", "slot": "SHORTS" },
+        { "item_id": "raid_shorts_02", "base_name": "Reinforced Raid Pants", "slot": "SHORTS" },
+        { "item_id": "raid_boots_01", "base_name": "Heavy Assault Boots", "slot": "BOOTS" },
+        { "item_id": "raid_boots_02", "base_name": "Stench-Runner Sneakers", "slot": "BOOTS" },
+        { "item_id": "raid_cape_01", "base_name": "Tattered Raid Banner", "slot": "CAPE" },
+        { "item_id": "raid_cape_02", "base_name": "Cloak of the Raid Captain", "slot": "CAPE" },
+        { "item_id": "raid_pet_01", "base_name": "Attack Fart-Bot", "slot": "PET" },
+        { "item_id": "raid_pet_02", "base_name": "War Carrier Pigeon", "slot": "PET" },
+        { "item_id": "raid_power_01", "base_name": "Signal Amplifier Beacon", "slot": "POWER" },
+        { "item_id": "raid_power_02", "base_name": "Overclocked Raid Transceiver", "slot": "POWER" }
+      ]
+    },
+    {
+      "set_id": "set_cto",
+      "name": "CTO Specialist",
+      "bonus": "+15% CTO XP Bonus",
+      "items": [
+        { "item_id": "cto_hat_01", "base_name": "CTO Command Headset", "slot": "HAT" },
+        { "item_id": "cto_hat_02", "base_name": "Chart-Sniffing Monocle", "slot": "HAT" },
+        { "item_id": "cto_top_01", "base_name": "Beans & Balance Sheet Suit", "slot": "TOP" },
+        { "item_id": "cto_top_02", "base_name": "Strategic Command Blazer", "slot": "TOP" },
+        { "item_id": "cto_shorts_01", "base_name": "Formal CTO Trousers", "slot": "SHORTS" },
+        { "item_id": "cto_shorts_02", "base_name": "Tactical Dev Chinos", "slot": "SHORTS" },
+        { "item_id": "cto_boots_01", "base_name": "Polished Executive Shoes", "slot": "BOOTS" },
+        { "item_id": "cto_boots_02", "base_name": "Cyber-Strider Boots", "slot": "BOOTS" },
+        { "item_id": "cto_cape_01", "base_name": "Blockchain Tapestry", "slot": "CAPE" },
+        { "item_id": "cto_cape_02", "base_name": "Network Protocol Cape", "slot": "CAPE" },
+        { "item_id": "cto_pet_01", "base_name": "Autonomous Code Drone", "slot": "PET" },
+        { "item_id": "cto_pet_02", "base_name": "Cyber-Chihuahua Companion", "slot": "PET" },
+        { "item_id": "cto_power_01", "base_name": "Methane Terminal", "slot": "POWER" },
+        { "item_id": "cto_power_02", "base_name": "High-Frequency Router", "slot": "POWER" }
+      ]
+    },
+    {
+      "set_id": "set_meme",
+      "name": "Meme Specialist",
+      "bonus": "+15% Meme XP Bonus",
+      "items": [
+        { "item_id": "meme_hat_01", "base_name": "Jester Crown of Memes", "slot": "HAT" },
+        { "item_id": "meme_hat_02", "base_name": "Pixel Art Bucket Hat", "slot": "HAT" },
+        { "item_id": "meme_top_01", "base_name": "Shitposter Hoodie", "slot": "TOP" },
+        { "item_id": "meme_top_02", "base_name": "Canvas-Print Sweater", "slot": "TOP" },
+        { "item_id": "meme_shorts_01", "base_name": "Rainbow Gradient Shorts", "slot": "SHORTS" },
+        { "item_id": "meme_shorts_02", "base_name": "Paint-Spattered Joggers", "slot": "SHORTS" },
+        { "item_id": "meme_boots_01", "base_name": "Oversized Clown Kicks", "slot": "BOOTS" },
+        { "item_id": "meme_boots_02", "base_name": "Light-Up Meme High-Tops", "slot": "BOOTS" },
+        { "item_id": "meme_cape_01", "base_name": "Cape of Infinite GIF Loops", "slot": "CAPE" },
+        { "item_id": "meme_cape_02", "base_name": "Viral Trend Mantle", "slot": "CAPE" },
+        { "item_id": "meme_pet_01", "base_name": "Flying Pepe-Gecko", "slot": "PET" },
+        { "item_id": "meme_pet_02", "base_name": "Sentient Meme Toad", "slot": "PET" },
+        { "item_id": "meme_power_01", "base_name": "Golden Stylus Pen", "slot": "POWER" },
+        { "item_id": "meme_power_02", "base_name": "Viral Content Generator", "slot": "POWER" }
+      ]
+    },
+    {
+      "set_id": "set_video",
+      "name": "Video Specialist",
+      "bonus": "+15% Video XP Bonus",
+      "items": [
+        { "item_id": "video_hat_01", "base_name": "Director's Beret", "slot": "HAT" },
+        { "item_id": "video_hat_02", "base_name": "Streamer Ring Light Cap", "slot": "HAT" },
+        { "item_id": "video_top_01", "base_name": "Production Crew Jacket", "slot": "TOP" },
+        { "item_id": "video_top_02", "base_name": "Green Screen Bodysuit Top", "slot": "TOP" },
+        {
+          "item_id": "video_shorts_01",
+          "base_name": "Cinematographer Cargo Shorts",
+          "slot": "SHORTS"
+        },
+        { "item_id": "video_shorts_02", "base_name": "Motion Capture Trousers", "slot": "SHORTS" },
+        { "item_id": "video_boots_01", "base_name": "Studio Production Boots", "slot": "BOOTS" },
+        { "item_id": "video_boots_02", "base_name": "High-Key LED Sneakers", "slot": "BOOTS" },
+        { "item_id": "video_cape_01", "base_name": "Velvet Red Carpet Cape", "slot": "CAPE" },
+        { "item_id": "video_cape_02", "base_name": "Film Strip Trail Cloak", "slot": "CAPE" },
+        { "item_id": "video_pet_01", "base_name": "Flying Camera Drone", "slot": "PET" },
+        { "item_id": "video_pet_02", "base_name": "Clapperboard Monkey", "slot": "PET" },
+        { "item_id": "video_power_01", "base_name": "4K Cinema Lens", "slot": "POWER" },
+        { "item_id": "video_power_02", "base_name": "Broadcast Transmitter Box", "slot": "POWER" }
+      ]
+    },
+    {
+      "set_id": "set_mission",
+      "name": "Mission Specialist",
+      "bonus": "+15% Mission XP Bonus",
+      "items": [
+        { "item_id": "mission_hat_01", "base_name": "Scout Patrol Cap", "slot": "HAT" },
+        { "item_id": "mission_hat_02", "base_name": "Completionist Helmet", "slot": "HAT" },
+        { "item_id": "mission_top_01", "base_name": "Field Agent Utility Vest", "slot": "TOP" },
+        { "item_id": "mission_top_02", "base_name": "Daily Streak Windbreaker", "slot": "TOP" },
+        {
+          "item_id": "mission_shorts_01",
+          "base_name": "Endurance Runner Shorts",
+          "slot": "SHORTS"
+        },
+        { "item_id": "mission_shorts_02", "base_name": "Tactical Duty Pants", "slot": "SHORTS" },
+        { "item_id": "mission_boots_01", "base_name": "Marathon Scout Boots", "slot": "BOOTS" },
+        {
+          "item_id": "mission_boots_02",
+          "base_name": "Terrain Trailblazer Shoes",
+          "slot": "BOOTS"
+        },
+        { "item_id": "mission_cape_01", "base_name": "Cloak of the Tracker", "slot": "CAPE" },
+        { "item_id": "mission_cape_02", "base_name": "Merit Badge Tapestry", "slot": "CAPE" },
+        { "item_id": "mission_pet_01", "base_name": "Loyal Recon Falcon", "slot": "PET" },
+        { "item_id": "mission_pet_02", "base_name": "Objective-Seeking Hound", "slot": "PET" },
+        { "item_id": "mission_power_01", "base_name": "Tactical Compass Device", "slot": "POWER" },
+        { "item_id": "mission_power_02", "base_name": "Questmaster Tracker", "slot": "POWER" }
+      ]
+    },
+    {
+      "set_id": "set_season",
+      "name": "Season Specialist",
+      "bonus": "+10% General XP Bonus",
+      "items": [
+        { "item_id": "season_hat_01", "base_name": "Crown of Eternal Stench", "slot": "HAT" },
+        { "item_id": "season_hat_02", "base_name": "Veteran Raider Helmet", "slot": "HAT" },
+        { "item_id": "season_top_01", "base_name": "Season 1 Champion Armor", "slot": "TOP" },
+        { "item_id": "season_top_02", "base_name": "Prestige Leader Tunic", "slot": "TOP" },
+        { "item_id": "season_shorts_01", "base_name": "Golden Season Greaves", "slot": "SHORTS" },
+        { "item_id": "season_shorts_02", "base_name": "Eternal Fart Leggings", "slot": "SHORTS" },
+        { "item_id": "season_boots_01", "base_name": "Tread of the Warlord", "slot": "BOOTS" },
+        { "item_id": "season_boots_02", "base_name": "Seasoned Wanderer Boots", "slot": "BOOTS" },
+        {
+          "item_id": "season_cape_01",
+          "base_name": "Mantle of Eternal Fart Legend",
+          "slot": "CAPE"
+        },
+        { "item_id": "season_cape_02", "base_name": "Season 1 Hero Banner", "slot": "CAPE" },
+        { "item_id": "season_pet_01", "base_name": "Phoenix Fart-Sprite", "slot": "PET" },
+        { "item_id": "season_pet_02", "base_name": "Golden Methane Dragon", "slot": "PET" },
+        {
+          "item_id": "season_power_01",
+          "base_name": "Aura of Methane Annihilation",
+          "slot": "POWER"
+        },
+        { "item_id": "season_power_02", "base_name": "Seasonal Orb of Destiny", "slot": "POWER" }
+      ]
+    }
+  ]
+}

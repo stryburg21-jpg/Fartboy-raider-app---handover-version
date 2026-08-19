@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="power_overlay_b">
+    <path d="M80 250 C40 370, 200 520, 250 540 C320 520, 460 370, 420 250 Q250 180 80 250 Z" fill="url(#plasma_grad)" opacity="0.45"/>
+    <defs>
+      <radialGradient id="plasma_grad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#06B6D4"/>
+        <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="pet_overlay_b">
+    <g transform="translate(360, 350)">
+      <circle cx="0" cy="0" r="34" fill="#F59E0B" opacity="0.85"/>
+      <path d="M-15 -10 L0 -35 L15 -10 Z" fill="#FBBF24"/>
+      <circle cx="-10" cy="-2" r="5" fill="#451A03"/>
+      <circle cx="10" cy="-2" r="5" fill="#451A03"/>
+    </g>
+  </g>
+</svg>

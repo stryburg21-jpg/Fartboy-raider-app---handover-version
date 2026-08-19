@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="hat_overlay_b">
+    <path d="M180 140 C180 95, 320 95, 320 140 C320 165, 180 165, 180 140 Z" fill="#090D16" stroke="#10B981" stroke-width="5"/>
+    <path d="M200 135 L300 135 L290 152 L210 152 Z" fill="#06B6D4" opacity="0.9"/>
+  </g>
+</svg>

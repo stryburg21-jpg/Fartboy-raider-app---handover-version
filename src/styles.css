@@ -1,0 +1,650 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Fartboy Raid 2.0 — dark gaming design system.
+ * All colors in oklch. Rarity tokens drive item cards, borders, glows.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+
+  --color-rarity-common: var(--rarity-common);
+  --color-rarity-uncommon: var(--rarity-uncommon);
+  --color-rarity-rare: var(--rarity-rare);
+  --color-rarity-epic: var(--rarity-epic);
+  --color-rarity-legendary: var(--rarity-legendary);
+  --color-rarity-mythic: var(--rarity-mythic);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Dark gaming palette — deep charcoal with neon lime accent */
+  --background: oklch(0.14 0.02 260);
+  --foreground: oklch(0.97 0.01 100);
+
+  --surface-1: oklch(0.18 0.02 260);
+  --surface-2: oklch(0.22 0.025 260);
+  --surface-3: oklch(0.27 0.03 260);
+
+  --card: oklch(0.18 0.02 260);
+  --card-foreground: oklch(0.97 0.01 100);
+  --popover: oklch(0.18 0.02 260);
+  --popover-foreground: oklch(0.97 0.01 100);
+
+  --primary: oklch(0.85 0.19 128); /* neon lime */
+  --primary-foreground: oklch(0.16 0.02 260);
+  --secondary: oklch(0.27 0.03 260);
+  --secondary-foreground: oklch(0.97 0.01 100);
+  --muted: oklch(0.22 0.025 260);
+  --muted-foreground: oklch(0.66 0.02 260);
+  --accent: oklch(0.75 0.17 60); /* amber gold */
+  --accent-foreground: oklch(0.16 0.02 260);
+  --destructive: oklch(0.62 0.24 27);
+  --destructive-foreground: oklch(0.97 0.01 100);
+  --border: oklch(0.28 0.02 260);
+  --input: oklch(0.28 0.02 260);
+  --ring: oklch(0.85 0.19 128);
+
+  /* Rarity tokens */
+  --rarity-common: oklch(0.72 0.02 260);
+  --rarity-uncommon: oklch(0.75 0.16 145);
+  --rarity-rare: oklch(0.7 0.18 240);
+  --rarity-epic: oklch(0.65 0.24 300);
+  --rarity-legendary: oklch(0.78 0.18 65);
+  --rarity-mythic: oklch(0.7 0.26 15);
+
+  --shadow-glow: 0 0 24px -4px color-mix(in oklab, var(--primary) 50%, transparent);
+
+  /* Discord Mobile Activity & Device Safe-Area Insets */
+  --safe-area-top: max(env(safe-area-inset-top, 0px), var(--discord-safe-area-inset-top, 0px));
+  --safe-area-bottom: max(
+    env(safe-area-inset-bottom, 0px),
+    var(--discord-safe-area-inset-bottom, 0px)
+  );
+  --safe-area-left: max(env(safe-area-inset-left, 0px), var(--discord-safe-area-inset-left, 0px));
+  --safe-area-right: max(
+    env(safe-area-inset-right, 0px),
+    var(--discord-safe-area-inset-right, 0px)
+  );
+}
+
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), var(--discord-safe-area-inset-top, 0px));
+}
+
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), var(--discord-safe-area-inset-bottom, 0px));
+}
+
+.pl-safe {
+  padding-left: max(env(safe-area-inset-left, 0px), var(--discord-safe-area-inset-left, 0px));
+}
+
+.pr-safe {
+  padding-right: max(env(safe-area-inset-right, 0px), var(--discord-safe-area-inset-right, 0px));
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility rarity-border-common {
+  border-color: var(--rarity-common);
+}
+@utility rarity-border-uncommon {
+  border-color: var(--rarity-uncommon);
+}
+@utility rarity-border-rare {
+  border-color: var(--rarity-rare);
+}
+@utility rarity-border-epic {
+  border-color: var(--rarity-epic);
+}
+@utility rarity-border-legendary {
+  border-color: var(--rarity-legendary);
+  box-shadow: 0 0 18px -4px color-mix(in oklab, var(--rarity-legendary) 60%, transparent);
+}
+@utility rarity-border-mythic {
+  border-color: var(--rarity-mythic);
+  box-shadow: 0 0 22px -4px color-mix(in oklab, var(--rarity-mythic) 70%, transparent);
+}
+
+@keyframes sheenSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes godrayRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sparkFall {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes ringBurst {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes screenShake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-3px, 2px) rotate(-1deg);
+  }
+  40% {
+    transform: translate(3px, -2px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-2px, -1px) rotate(-0.5deg);
+  }
+  80% {
+    transform: translate(2px, 1px) rotate(0.5deg);
+  }
+}
+
+@keyframes drumrollPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes celebrationIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes showcaseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rarityBeam {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@utility animate-sheen-sweep {
+  animation: sheenSweep 2.5s ease-in-out infinite;
+}
+
+@utility animate-godray {
+  animation: godrayRotate 20s linear infinite;
+}
+
+@utility animate-spark-fall {
+  animation: sparkFall 3s ease-in infinite;
+}
+
+@utility animate-ring-burst {
+  animation: ringBurst 1.8s ease-out infinite;
+}
+
+@utility animate-screen-shake {
+  animation: screenShake 0.4s ease-in-out;
+}
+
+@utility animate-drumroll {
+  animation: drumrollPulse 0.6s ease-in-out infinite;
+}
+
+@utility animate-celebration-in {
+  animation: celebrationIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-showcase-in {
+  animation: showcaseIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-scale-in {
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-rarity-beam {
+  animation: rarityBeam 1.5s ease-out infinite alternate;
+}
+
+/* Loot-vault ambient particle drift — used by shop pack cards */
+@keyframes driftParticle {
+  0% {
+    transform: translate(0, 6px) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: var(--drift-opacity, 0.9);
+  }
+  100% {
+    transform: translate(var(--drift-x, 8px), -54px) scale(1);
+    opacity: 0;
+  }
+}
+
+@utility animate-drift-particle {
+  animation: driftParticle 3.4s ease-in-out infinite;
+}
+
+@utility animate-plaque-pulse {
+  border: 1px solid #d4af37;
+}
+
+/* Idle pack chests: gentle float, with a periodic attention-grabbing
+   shake/jiggle every few seconds - mirrors the .animate-periodic-shake
+   timing used elsewhere for "look at me" cards. */
+@keyframes packIdleShake {
+  0%,
+  78%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  80% {
+    transform: translateY(-1px) translateX(-4px) rotate(-3deg) scale(1.02);
+  }
+  82% {
+    transform: translateY(-1px) translateX(4px) rotate(3deg) scale(1.02);
+  }
+  84% {
+    transform: translateY(0) translateX(-3px) rotate(-2deg) scale(1.01);
+  }
+  86% {
+    transform: translateY(0) translateX(3px) rotate(2deg) scale(1.01);
+  }
+  88% {
+    transform: translateX(-1px) rotate(-0.5deg);
+  }
+  90%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@utility animate-pack-idle {
+  animation: packIdleShake 4.5s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  transform: translateY(0);
+}
+
+@utility animate-aura-cyan {
+  border: 1px solid #00f0ff;
+}
+
+@utility animate-aura-purple {
+  border: 1px solid #a855f7;
+}
+
+@utility animate-aura-gold {
+  border: 1px solid #d4af37;
+}
+
+@keyframes fullSetShimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes petGentleFloat {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.04);
+  }
+}
+
+@keyframes powerGentlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.85));
+  }
+}
+
+@utility animate-pet-active {
+  animation: petGentleFloat 3s ease-in-out infinite;
+}
+
+@utility animate-power-active {
+  animation: powerGentlePulse 2.5s ease-in-out infinite;
+}
+
+@utility animate-fullset-shimmer {
+  background-size: 200% 100%;
+  animation: fullSetShimmerSweep 3.5s linear infinite;
+}
+
+/* Foil Tear Diagonal Laser Swipe */
+@keyframes laserSwipe {
+  0% {
+    transform: translate(-140%, -140%) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(140%, 140%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@utility animate-laser-swipe {
+  animation: laserSwipe 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes laserLineDraw {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@utility animate-laser-draw {
+  animation: laserLineDraw 0.6s ease-out forwards;
+}
+
+/* Diagonal Spark Scatter */
+@keyframes sparkScatter {
+  0% {
+    transform: scale(0.2) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4) translate(var(--spark-x, 30px), var(--spark-y, -30px));
+    opacity: 0;
+  }
+}
+
+@utility animate-spark-scatter {
+  animation: sparkScatter 0.65s ease-out forwards;
+}
+
+/* Suspense Dramatic Rumble */
+@keyframes suspenseRumble {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translate(-2px, 1px) rotate(-0.5deg) scale(1.02);
+  }
+  30% {
+    transform: translate(2px, -2px) rotate(0.5deg) scale(1.02);
+  }
+  45% {
+    transform: translate(-3px, -1px) rotate(-1deg) scale(1.03);
+  }
+  60% {
+    transform: translate(3px, 1px) rotate(1deg) scale(1.04);
+  }
+  75% {
+    transform: translate(-2px, 2px) rotate(-0.5deg) scale(1.05);
+  }
+  90% {
+    transform: translate(2px, -1px) rotate(0.5deg) scale(1.05);
+  }
+}
+
+@utility animate-suspense-rumble {
+  animation: suspenseRumble 0.15s linear infinite;
+}
+
+/* Pull Banner Dramatic Impact Drop */
+@keyframes bannerDrop {
+  0% {
+    transform: scale(2.2) translateY(-40px);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  50% {
+    transform: scale(0.95) translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+  75% {
+    transform: scale(1.05) translateY(-4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@utility animate-banner-drop {
+  animation: bannerDrop 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+/* Horizontal Foil Tear Left-to-Right Peel */
+@keyframes foilTearStripHorizontal {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    clip-path: polygon(0% 0%, 25% 0%, 25% 100%, 0% 100%);
+    transform: translate(2px, -2px) rotate(1deg);
+    opacity: 1;
+  }
+  60% {
+    clip-path: polygon(0% 0%, 75% 0%, 75% 100%, 0% 100%);
+    transform: translate(12px, -8px) rotate(4deg);
+    opacity: 0.95;
+  }
+  85% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translate(28px, -18px) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translate(50px, -30px) rotate(16deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@utility animate-foil-tear-horizontal {
+  animation: foilTearStripHorizontal 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Horizontal Laser Seam Slice Sweep across Foil */
+@keyframes foilLaserSliceHorizontal {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: scaleX(0.2);
+  }
+  10% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scaleX(1.2);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: scaleX(0.4);
+  }
+}
+
+@utility animate-foil-slice-sweep {
+  animation: foilLaserSliceHorizontal 0.95s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Packet Top Split Open and Erupt Radiant Glow */
+@keyframes packetTopSplit {
+  0% {
+    transform: translateY(0) scaleY(1);
+    filter: brightness(1);
+  }
+  40% {
+    transform: translateY(-2px) scaleY(1.02);
+    filter: brightness(1.2);
+  }
+  75% {
+    transform: translateY(-12px) rotate(3deg) scale(1.05);
+    filter: brightness(2);
+  }
+  100% {
+    transform: translateY(-26px) rotate(6deg) scale(1.1);
+    opacity: 0;
+    filter: brightness(3);
+  }
+}
+
+@utility animate-packet-split {
+  animation: packetTopSplit 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Horizontal Spark Stream */
+@keyframes sparkStreamHorizontal {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--spark-x, 40px), var(--spark-y, -25px)) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@utility animate-spark-stream {
+  animation: sparkStreamHorizontal 0.75s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}

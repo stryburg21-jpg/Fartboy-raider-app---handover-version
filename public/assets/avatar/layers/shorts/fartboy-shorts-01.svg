@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="100%" height="100%">
+  <defs>
+    <!-- 3D SHORTS DENIM / TACTICAL FABRIC GRADIENT -->
+    <radialGradient id="shortsBody3D" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="85%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </radialGradient>
+
+    <linearGradient id="beltGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <filter id="shortsShadow3D" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- SHORTS LAYER (FITS WAIST & HIPS Y=305..368, X=140..260) -->
+  <g id="shorts-3d-layer" filter="url(#shortsShadow3D)">
+    <!-- Ambient Occlusion Shadow Cast onto Thighs -->
+    <path d="M 140 365 L 190 365 L 188 372 L 138 372 Z" fill="#000000" opacity="0.4"/>
+    <path d="M 210 365 L 260 365 L 262 372 L 212 372 Z" fill="#000000" opacity="0.4"/>
+
+    <!-- Main Shorts Body -->
+    <path d="M 144 305 L 256 305 L 260 365 L 210 365 L 200 325 L 190 365 L 140 365 Z" fill="url(#shortsBody3D)" stroke="#172554" stroke-width="2.5"/>
+
+    <!-- 3D Denim/Cargo Crease Shadows -->
+    <path d="M 160 318 L 156 360 M 240 318 L 244 360" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+    <path d="M 195 328 L 192 360 M 205 328 L 208 360" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+
+    <!-- Thigh Highlights -->
+    <path d="M 150 320 Q 165 340 152 355" stroke="#93c5fd" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 250 320 Q 235 340 248 355" stroke="#93c5fd" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- Gold Tactical Belt with Metallic Buckle -->
+    <rect x="144" y="305" width="112" height="11" rx="3" fill="url(#beltGrad)" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Belt Buckle -->
+    <rect x="190" y="303" width="20" height="15" rx="3" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+    <rect x="194" y="306" width="12" height="9" rx="1" fill="#e0f2fe"/>
+
+    <!-- Tactical Pocket Strips -->
+    <path d="M 150 320 C 160 330, 160 342, 148 352" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M 250 320 C 240 330, 240 342, 252 352" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  </g>
+</svg>

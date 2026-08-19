@@ -1,0 +1,8 @@
+{
+  "name": "Raider Game - V1.118a",
+  "description": "Imported from GitHub: stryburg21-jpg/Beta-version---fartbot-raid-2.0",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

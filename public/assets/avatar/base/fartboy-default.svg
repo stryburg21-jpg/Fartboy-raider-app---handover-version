@@ -1,0 +1,219 @@
+<!-- LEGACY: Old placeholder avatar. Do not use for active rendering. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="100%" height="100%">
+  <defs>
+    <!-- 3D VOLUMETRIC SKIN GRADIENTS -->
+    <radialGradient id="headSkin3D" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="40%" stop-color="#14b8a6"/>
+      <stop offset="85%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </radialGradient>
+
+    <radialGradient id="bodySkin3D" cx="35%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="50%" stop-color="#0d9488"/>
+      <stop offset="85%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </radialGradient>
+
+    <radialGradient id="limbSkin3D" cx="30%" cy="20%" r="75%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="60%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </radialGradient>
+
+    <linearGradient id="hairGrad3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="50%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+
+    <!-- 3D COLLECTIBLE METALLIC PEDESTAL GRADIENTS -->
+    <linearGradient id="pedestalBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563"/>
+      <stop offset="30%" stop-color="#1f2937"/>
+      <stop offset="70%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <linearGradient id="pedestalRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="25%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#34d399"/>
+      <stop offset="75%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <radialGradient id="pedestalCenterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#059669" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- FILTERS FOR AMBIENT SHADOWS AND GLOW -->
+    <filter id="softAoShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="pedestalGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 3D COLLECTIBLE METALLIC PEDESTAL WITH RUNIC LIGHTING -->
+  <g id="pedestal-3d">
+    <!-- Ground Shadow Cast by Pedestal -->
+    <ellipse cx="200" cy="470" rx="145" ry="30" fill="#000000" opacity="0.7" filter="url(#softAoShadow)"/>
+    
+    <!-- Outer Metallic Bezel Base -->
+    <ellipse cx="200" cy="458" rx="138" ry="32" fill="url(#pedestalBase)" stroke="#6b7280" stroke-width="2.5"/>
+    <ellipse cx="200" cy="454" rx="134" ry="28" fill="#111827" stroke="url(#pedestalRim)" stroke-width="3.5" filter="url(#pedestalGlowFilter)"/>
+    
+    <!-- Inner Glowing Energy Core Disk -->
+    <ellipse cx="200" cy="452" rx="112" ry="20" fill="url(#pedestalCenterGlow)"/>
+    <ellipse cx="200" cy="452" rx="100" ry="16" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="10 6" opacity="0.85"/>
+    <ellipse cx="200" cy="452" rx="75" ry="10" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+
+    <!-- Pedestal Rim Specular Highlight Ring -->
+    <path d="M 80 452 Q 200 428 320 452" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.35"/>
+  </g>
+
+  <!-- AMBIENT OCCLUSION SHADOW CAST UNDER FEET ONTO PEDESTAL -->
+  <g id="feet-shadows">
+    <ellipse cx="166" cy="442" rx="22" ry="10" fill="#000000" opacity="0.6" filter="url(#softAoShadow)"/>
+    <ellipse cx="234" cy="442" rx="22" ry="10" fill="#000000" opacity="0.6" filter="url(#softAoShadow)"/>
+  </g>
+
+  <!-- BASE 3D FARTBOY CHARACTER BODY & ANATOMY -->
+  <g id="fartboy-body-3d">
+
+    <!-- LEGS (3D Sculpted Base Legs) -->
+    <!-- Left Leg -->
+    <g id="left-leg">
+      <path d="M 150 318 L 148 435 L 184 435 L 184 318 Z" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+      <!-- Inner Leg Muscle Highlight -->
+      <path d="M 154 322 Q 160 370 156 428" stroke="#5eead4" stroke-width="2" opacity="0.4" fill="none" stroke-linecap="round"/>
+      <!-- Knee Cap Definition -->
+      <ellipse cx="166" cy="370" rx="9" ry="12" fill="#14b8a6" opacity="0.5"/>
+    </g>
+
+    <!-- Right Leg -->
+    <g id="right-leg">
+      <path d="M 216 318 L 216 435 L 252 435 L 250 318 Z" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+      <!-- Inner Leg Muscle Highlight -->
+      <path d="M 246 322 Q 240 370 244 428" stroke="#5eead4" stroke-width="2" opacity="0.4" fill="none" stroke-linecap="round"/>
+      <!-- Knee Cap Definition -->
+      <ellipse cx="234" cy="370" rx="9" ry="12" fill="#14b8a6" opacity="0.5"/>
+    </g>
+
+    <!-- FEET BASE (Bare 3D Feet) -->
+    <ellipse cx="166" cy="436" rx="20" ry="10" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+    <ellipse cx="234" cy="436" rx="20" ry="10" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+
+    <!-- TORSO & ABDOMEN (Sculpted 3D Chest & Abs) -->
+    <g id="torso-3d">
+      <path d="M 140 195 C 136 250, 144 310, 148 325 L 252 325 C 256 310, 264 250, 260 195 Z" fill="url(#bodySkin3D)" stroke="#042f2e" stroke-width="2.5"/>
+      <!-- Pectoral Muscle Contours -->
+      <path d="M 152 210 Q 180 230 198 228 M 248 210 Q 220 230 202 228" stroke="#0f766e" stroke-width="2.5" fill="none" opacity="0.7"/>
+      <!-- Abdominal Core 3D Contours -->
+      <path d="M 180 242 Q 200 246 220 242 M 182 262 Q 200 266 218 262 M 185 282 Q 200 285 215 282" stroke="#0f766e" stroke-width="2" fill="none" opacity="0.6"/>
+      <!-- Specular Highlight down Chest -->
+      <path d="M 160 202 C 158 240, 162 290, 165 315" stroke="#5eead4" stroke-width="3" opacity="0.35" fill="none"/>
+    </g>
+
+    <!-- ARMS (3D Muscle Deltoids & Biceps) -->
+    <!-- Left Arm -->
+    <g id="left-arm">
+      <path d="M 140 195 C 118 220, 110 280, 118 310 C 124 318, 136 318, 140 308 C 136 280, 140 225, 148 205 Z" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+      <!-- Shoulder Deltoid Shadow -->
+      <path d="M 138 198 C 125 215, 122 235, 136 245" fill="none" stroke="#0f766e" stroke-width="2" opacity="0.7"/>
+      <!-- Arm Highlight -->
+      <path d="M 126 230 Q 120 270 126 298" stroke="#5eead4" stroke-width="2" opacity="0.4" fill="none"/>
+    </g>
+
+    <!-- Right Arm -->
+    <g id="right-arm">
+      <path d="M 260 195 C 282 220, 290 280, 282 310 C 276 318, 264 318, 260 308 C 264 280, 260 225, 252 205 Z" fill="url(#limbSkin3D)" stroke="#042f2e" stroke-width="2"/>
+      <!-- Shoulder Deltoid Shadow -->
+      <path d="M 262 198 C 275 215, 278 235, 264 245" fill="none" stroke="#0f766e" stroke-width="2" opacity="0.7"/>
+      <!-- Arm Highlight -->
+      <path d="M 274 230 Q 280 270 274 298" stroke="#5eead4" stroke-width="2" opacity="0.4" fill="none"/>
+    </g>
+
+    <!-- NECK (3D Cylinder Neck) -->
+    <g id="neck-3d">
+      <path d="M 182 168 L 182 198 L 218 198 L 218 168 Z" fill="url(#bodySkin3D)" stroke="#042f2e" stroke-width="2"/>
+      <!-- Neck Shadow Under Chin -->
+      <path d="M 182 170 C 192 182, 208 182, 218 170 L 218 182 C 208 192, 192 192, 182 182 Z" fill="#042f2e" opacity="0.5"/>
+    </g>
+
+    <!-- HEAD & EARS (3D Sphere Head with Specular Rim Light) -->
+    <g id="head-group-3d">
+      <!-- Left Ear 3D -->
+      <circle cx="146" cy="138" r="13" fill="url(#headSkin3D)" stroke="#042f2e" stroke-width="2.5"/>
+      <circle cx="146" cy="138" r="7" fill="#0f766e"/>
+      <circle cx="144" cy="136" r="2" fill="#5eead4" opacity="0.8"/>
+
+      <!-- Right Ear 3D -->
+      <circle cx="254" cy="138" r="13" fill="url(#headSkin3D)" stroke="#042f2e" stroke-width="2.5"/>
+      <circle cx="254" cy="138" r="7" fill="#0f766e"/>
+      <circle cx="252" cy="136" r="2" fill="#5eead4" opacity="0.8"/>
+
+      <!-- Main Head Sphere -->
+      <ellipse cx="200" cy="135" rx="54" ry="50" fill="url(#headSkin3D)" stroke="#042f2e" stroke-width="3.5"/>
+
+      <!-- Head Top 3D Specular Light Curve -->
+      <path d="M 160 105 C 180 92, 220 92, 240 105" stroke="#5eead4" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+      <!-- 3D Hair Tufts (when no hat equipped) -->
+      <path d="M 166 94 Q 185 70 200 88 Q 215 70 234 94 C 220 86, 180 86, 166 94 Z" fill="url(#hairGrad3D)" stroke="#042f2e" stroke-width="2"/>
+      <path d="M 180 84 Q 192 72 200 82 Q 208 72 220 84" stroke="#5eead4" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+      <!-- EXPRESSIVE 3D FACE FEATURES -->
+      <!-- Eyes -->
+      <!-- Left Eye -->
+      <g id="left-eye-3d">
+        <ellipse cx="178" cy="130" rx="10" ry="13" fill="#ffffff" stroke="#042f2e" stroke-width="2.5"/>
+        <ellipse cx="180" cy="130" rx="6" ry="7" fill="#0f172a"/>
+        <!-- Eye Specular Highlights -->
+        <circle cx="182" cy="127" r="2.5" fill="#ffffff"/>
+        <circle cx="178" cy="133" r="1" fill="#ffffff" opacity="0.8"/>
+      </g>
+
+      <!-- Right Eye -->
+      <g id="right-eye-3d">
+        <ellipse cx="222" cy="130" rx="10" ry="13" fill="#ffffff" stroke="#042f2e" stroke-width="2.5"/>
+        <ellipse cx="220" cy="130" rx="6" ry="7" fill="#0f172a"/>
+        <!-- Eye Specular Highlights -->
+        <circle cx="222" cy="127" r="2.5" fill="#ffffff"/>
+        <circle cx="218" cy="133" r="1" fill="#ffffff" opacity="0.8"/>
+      </g>
+
+      <!-- Eyebrows (Dynamic Hero Stance) -->
+      <path d="M 164 112 Q 178 116 192 114" stroke="#042f2e" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <path d="M 236 112 Q 222 116 208 114" stroke="#042f2e" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+      <!-- Nose 3D Shadow -->
+      <path d="M 200 132 Q 195 142 202 144" stroke="#042f2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="198" cy="142" rx="3" ry="1.5" fill="#0f766e" opacity="0.6"/>
+
+      <!-- Cheeky Smirk & Mouth -->
+      <path d="M 176 152 Q 200 170 224 152" stroke="#042f2e" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M 186 156 Q 200 164 214 156" fill="#f43f5e" stroke="#9f1239" stroke-width="1"/>
+      <path d="M 190 156 Q 200 159 210 156" fill="#ffffff"/>
+
+      <!-- Rosy 3D Cheek Glows -->
+      <ellipse cx="162" cy="144" rx="8" ry="4" fill="#f43f5e" opacity="0.25"/>
+      <ellipse cx="238" cy="144" rx="8" ry="4" fill="#f43f5e" opacity="0.25"/>
+    </g>
+
+  </g>
+</svg>

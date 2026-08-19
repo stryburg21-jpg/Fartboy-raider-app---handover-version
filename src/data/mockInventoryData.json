@@ -1,0 +1,122 @@
+{
+  "version": "3.3.0",
+  "totalRaiderPower": 136646,
+  "identity": {
+    "discordUsername": "@DiscordUser",
+    "equippedTitle": "Eternal Fart Legend",
+    "titleXpBoostPct": 3.0,
+    "activeSet": {
+      "setName": "Raid Specialist Set",
+      "slotsEquipped": 7,
+      "slotsRequired": 7,
+      "itemsDiscovered": 6,
+      "totalSetItems": 14,
+      "isFullSet": false,
+      "bonusDescription": "+15% Raid XP"
+    }
+  },
+  "slots": [
+    { "code": "head", "name": "Hat", "type": "gear", "icon": "🎩" },
+    { "code": "body", "name": "Top", "type": "gear", "icon": "👕" },
+    { "code": "shorts", "name": "Shorts", "type": "gear", "icon": "🩳" },
+    { "code": "feet", "name": "Boots", "type": "gear", "icon": "🥾" },
+    { "code": "back", "name": "Cape", "type": "gear", "icon": "🦸" },
+    { "code": "pet", "name": "Pet", "type": "gear", "icon": "🐾" },
+    { "code": "powerItem", "name": "Power Item", "type": "gear", "icon": "⚡" },
+    { "code": "avatar", "name": "Avatar Model", "type": "identity", "icon": "👤" },
+    { "code": "frame", "name": "Card Frame", "type": "identity", "icon": "🖼️" },
+    { "code": "background", "name": "Stage Artwork", "type": "identity", "icon": "🎨" }
+  ],
+  "loadout": {
+    "head": {
+      "id": "item_hat_rare_01",
+      "name": "Crown of Farts",
+      "slot": "head",
+      "rarity": "rare",
+      "level": 8,
+      "set": "Raid Specialist Set",
+      "raidPower": 18450,
+      "bonusXP": 2.5,
+      "image": "🎩"
+    },
+    "body": {
+      "id": "item_top_epic_01",
+      "name": "Toxic Hazard Vest",
+      "slot": "body",
+      "rarity": "epic",
+      "level": 9,
+      "set": "Raid Specialist Set",
+      "raidPower": 24200,
+      "bonusXP": 3.5,
+      "image": "👕"
+    },
+    "shorts": {
+      "id": "item_shorts_uncommon_01",
+      "name": "Tainted Cargo Shorts",
+      "slot": "shorts",
+      "rarity": "uncommon",
+      "level": 6,
+      "set": "Raid Specialist Set",
+      "raidPower": 11400,
+      "bonusXP": 1.5,
+      "image": "🩳"
+    },
+    "feet": {
+      "id": "item_boots_rare_01",
+      "name": "Methane Stompers",
+      "slot": "feet",
+      "rarity": "rare",
+      "level": 7,
+      "set": "Raid Specialist Set",
+      "raidPower": 15800,
+      "bonusXP": 2.0,
+      "image": "🥾"
+    },
+    "back": {
+      "id": "item_cape_legendary_01",
+      "name": "Cape of the Flatulent Sun",
+      "slot": "back",
+      "rarity": "legendary",
+      "level": 10,
+      "set": "Raid Specialist Set",
+      "raidPower": 28900,
+      "bonusXP": 4.5,
+      "image": "🦸"
+    },
+    "pet": {
+      "id": "item_pet_epic_01",
+      "name": "Stinky the Fart Sprite",
+      "slot": "pet",
+      "rarity": "epic",
+      "level": 8,
+      "set": "Raid Specialist Set",
+      "raidPower": 21396,
+      "bonusXP": 3.0,
+      "image": "🐾"
+    },
+    "powerItem": {
+      "id": "item_power_mythic_01",
+      "name": "Aura of Methane Annihilation",
+      "slot": "powerItem",
+      "rarity": "mythic",
+      "level": 10,
+      "set": "Raid Specialist Set",
+      "raidPower": 36500,
+      "bonusXP": 5.0,
+      "image": "⚡"
+    }
+  },
+  "stats": {
+    "raidPower": 136646,
+    "memePower": 42500,
+    "packLuck": 24.5,
+    "gearXP": 22.0
+  },
+  "powerBreakdown": {
+    "memes": { "label": "Memes Submitted", "count": 18, "xpGranted": 38500 },
+    "personalRaids": { "label": "Personal Raids Verified", "count": 42, "xpGranted": 44200 },
+    "officialRaids": { "label": "Official Raids Executed", "count": 28, "xpGranted": 39146 },
+    "platformBoosts": { "label": "Platform Daily Boosts", "count": 52, "xpGranted": 14800 },
+    "totalPower": 136646
+  }
+}

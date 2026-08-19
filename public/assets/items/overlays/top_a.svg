@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="top_overlay_a">
+    <!-- Shirt Torso -->
+    <path d="M175 220 L325 220 L335 340 L165 340 Z" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <!-- Sleeves -->
+    <path d="M175 220 L135 260 L160 280 L180 240 Z" fill="#111827"/>
+    <path d="M325 220 L365 260 L340 280 L320 240 Z" fill="#111827"/>
+    <!-- Shamrock Emblem -->
+    <g transform="translate(250, 270) scale(0.8)">
+      <circle cx="-12" cy="-12" r="12" fill="#22C55E"/>
+      <circle cx="12" cy="-12" r="12" fill="#22C55E"/>
+      <circle cx="-12" cy="12" r="12" fill="#22C55E"/>
+      <circle cx="12" cy="12" r="12" fill="#22C55E"/>
+      <path d="M0 5 L0 30" stroke="#15803D" stroke-width="6"/>
+    </g>
+  </g>
+</svg>

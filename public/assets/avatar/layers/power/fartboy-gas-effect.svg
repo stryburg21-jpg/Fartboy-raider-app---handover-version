@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="100%" height="100%">
+  <defs>
+    <!-- RADIAL SWIRLING POWER GRADIENTS -->
+    <radialGradient id="powerCoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#10b981" stop-opacity="0.6"/>
+      <stop offset="75%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="powerBlur3D" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- POWER EFFECT LAYER (RENDERED BEHIND CHARACTER Z-10) -->
+  <g id="power-effect-3d" filter="url(#powerBlur3D)">
+    <ellipse cx="200" cy="260" rx="175" ry="215" fill="url(#powerCoreGlow)"/>
+
+    <!-- Swirling Gas Clouds & Vortex Rays -->
+    <path d="M 80 280 C 50 190, 110 130, 155 100 C 185 140, 140 220, 80 280 Z" fill="#34d399" opacity="0.65"/>
+    <path d="M 320 300 C 350 200, 290 140, 245 100 C 215 140, 260 230, 320 300 Z" fill="#10b981" opacity="0.65"/>
+    <path d="M 110 400 C 60 330, 110 260, 160 210 C 180 260, 140 340, 110 400 Z" fill="#059669" opacity="0.6"/>
+    <path d="M 290 410 C 340 340, 290 270, 240 210 C 220 260, 260 350, 290 410 Z" fill="#34d399" opacity="0.6"/>
+  </g>
+
+  <!-- Glowing Mana Orbs & Energy Sparkles -->
+  <circle cx="105" cy="135" r="5" fill="#a7f3d0" opacity="0.95"/>
+  <circle cx="295" cy="125" r="6" fill="#6ee7b7" opacity="0.95"/>
+  <circle cx="75" cy="265" r="4" fill="#34d399" opacity="0.85"/>
+  <circle cx="325" cy="255" r="5" fill="#a7f3d0" opacity="0.85"/>
+  <circle cx="130" cy="385" r="6" fill="#6ee7b7" opacity="0.9"/>
+  <circle cx="270" cy="395" r="5" fill="#34d399" opacity="0.9"/>
+</svg>

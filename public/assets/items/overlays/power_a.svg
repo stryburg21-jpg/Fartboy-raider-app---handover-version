@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="power_overlay_a">
+    <!-- Hand Power Item / Swirling Gas Aura (zIndex 40) -->
+    <path d="M100 280 C60 380, 200 500, 250 520 C320 500, 440 380, 400 280 Q250 200 100 280 Z" fill="url(#gas_grad)" opacity="0.4"/>
+    <defs>
+      <radialGradient id="gas_grad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#22C55E"/>
+        <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </g>
+</svg>

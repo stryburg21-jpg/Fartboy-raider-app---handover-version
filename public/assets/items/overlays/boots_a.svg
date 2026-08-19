@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" fill="none">
+  <g id="boots_overlay_a">
+    <!-- Socks -->
+    <path d="M185 450 L215 450 L212 510 L188 510 Z" fill="#6B21A8"/>
+    <path d="M285 450 L315 450 L312 510 L288 510 Z" fill="#6B21A8"/>
+    <!-- Sneakers -->
+    <path d="M175 510 L225 510 L228 540 L165 540 Z" fill="#111827" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M275 510 L325 510 L335 540 L272 540 Z" fill="#111827" stroke="#F59E0B" stroke-width="2"/>
+  </g>
+</svg>
